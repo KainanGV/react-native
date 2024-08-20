@@ -1,50 +1,72 @@
-# Welcome to your Expo app 👋
+# 🚀 Desafio Técnico em React Native
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Bem-vindo ao desafio técnico em React Native! Este projeto demonstra uma configuração básica para um aplicativo móvel construído usando React Native com Expo. O aplicativo inclui várias funcionalidades essenciais, como registro e login de usuários, utilizando práticas modernas do React, validação de formulários e gerenciamento de estado.
 
-## Get started
+## 📱 Visão Geral das Telas
 
-1. Install dependencies
+### 1. **Tela de Registro**
+   - **Propósito:** Permitir que os usuários criem uma nova conta fornecendo suas informações pessoais, incluindo nome, e-mail, CPF, número de telefone e senha.
+   - **Principais Funcionalidades:**
+     - Validação de CPF com lógica personalizada.
+     - Campos de senha e confirmação de senha com opção de visualizar ou ocultar o conteúdo.
+     - Integração com uma API backend para criação de usuários.
+     - Seletor de código de país para o número de telefone.
 
-   ```bash
-   npm install
-   ```
+### 2. **Tela de Login**
+   - **Propósito:** Permitir que os usuários façam login usando seu e-mail, CPF ou número de telefone junto com a senha.
+   - **Principais Funcionalidades:**
+     - Integração com a API backend para autenticação.
+     - Tratamento de erros e feedback ao usuário para falhas no login.
 
-2. Start the app
+### 3. **Tela Principal**
+   - **Propósito:** Exibir uma saudação ao usuário e fornecer acesso rápido às funcionalidades mais usadas.
+   - **Principais Funcionalidades:**
+     - Cabeçalho com ícones de navegação e notificação.
+     - Campo de busca com ícone de lupa e botão de filtro.
+     - Exibição de médicos e categorias mais procuradas.
 
-   ```bash
-    npx expo start
-   ```
+## 🗂️ Arquitetura de Pastas
 
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+```plaintext
+/src
+├── /assets                # Static files (images, fonts, etc.)
+├── /components            # Reusable components
+├── /features              # Feature-specific code (e.g., auth, profile)
+│   ├── /auth
+│   ├── /profile
+│   └── /home
+├── /hooks                 # Custom hooks
+├── /navigation            # Navigation setup (React Navigation)
+├── /screens               # Screen components (connected to navigation)
+├── /services              # API calls and business logic
+├── /store                 # Global state management (e.g., Redux, Zustand)
+├── /styles                # Global styles and theming
+└── /utils                 # Utility functions
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### Estrutura Ideal (Se Houvesse Mais Tempo)
+- **Camadas Separadas:** Implementação de camadas bem definidas para separar responsabilidades como lógica de negócios, dados e apresentação.
+- **Gerenciamento de Estado Global:** Utilização de um gerenciador de estado como Redux ou Context API para gerenciar o estado de forma centralizada.
+- **Testes Automatizados:** Implementação de testes unitários e de integração usando Jest e Testing Library.
 
-## Learn more
+## 🛠️ Tecnologias e Princípios Utilizados
 
-To learn more about developing your project with Expo, look at the following resources:
+- **React Native & Expo:** Framework principal para desenvolvimento de aplicativos móveis multiplataforma.
+- **React Hook Form & Yup:** Gerenciamento de formulários e validação de dados.
+- **AsyncStorage:** Armazenamento local de dados de forma persistente.
+- **Axios:** Cliente HTTP para comunicação com a API backend.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## 🔮 Melhorias Futuras
 
-## Join the community
+- **Armazenamento Assíncrono:** Implementação de AsyncStorage para armazenar dados como tokens de autenticação de forma persistente.
+- **Internacionalização:** Suporte a múltiplos idiomas.
+- **Tema Escuro:** Implementação de temas claro e escuro.
+- **Monitoramento e Análise:** Integração com ferramentas de monitoramento para rastreamento de erros e análise de uso.
 
-Join our community of developers creating universal apps.
+## 📚 Como Rodar o Projeto
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+1. Clone este repositório.
+2. Execute `npm install` para instalar as dependências.
+3. Execute `expo start` para iniciar o projeto.
+
+😊
